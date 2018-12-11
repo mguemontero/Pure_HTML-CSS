@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Accordion test</title>
+    <link rel="stylesheet" type="text/css" href="app_one_style.css">
+</head>
+<body>
+	
+	<button class="accordion">Aftercare group</button>
+	<div class="panel">
+  		<p>We provide quality, therapeutic support to people in the local community 
+  		   who are engaged in the challenges of recovery. Meeting every Tuesday from 8 to 9.</p>
+	</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}
+</script>
+</body>
+</html>
